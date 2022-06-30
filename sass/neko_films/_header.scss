@@ -1,0 +1,31 @@
+.mid-service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-header{
+        color: $stroke;
+        text-transform: uppercase;
+    }
+    &-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+        &-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 17rem;
+            min-height: 25vh;
+            gap: 5px;
+        }
+    }
+}
+@media (max-width:$tablet){
+    .mid-service-list{
+        flex-direction: column;
+    }
+}

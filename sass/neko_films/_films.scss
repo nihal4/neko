@@ -1,0 +1,20 @@
+.mid-flim{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.mid-flim-list{
+    gap: 1rem;
+    display: flex;
+    list-style: none;
+}
+.flim-video{
+    border-radius: 5px;
+}
+@media (max-width:$mobile){
+    .mid-flim-list{
+        flex-direction: column;
+    }
+}
