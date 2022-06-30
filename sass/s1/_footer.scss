@@ -1,0 +1,19 @@
+.footer{
+    height: 10vh;
+    background-color: $footer-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    &-img{
+        width: 30px;
+        &:hover{
+            transform: perspective(200px) translateZ(15px);
+        }
+    }
+    &-list{
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+}

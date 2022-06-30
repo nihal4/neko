@@ -1,0 +1,97 @@
+//header
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 15vh;
+    animation: slide-up 2.5s ease-in;
+    transition: all .5s;
+    &-main{
+        font-size: 2.5rem;
+        color: transparent;
+        -webkit-text-stroke: 2px $stroke;
+        font-weight: 800;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        display: block;
+        &::before{
+            color: $stroke;
+            position: absolute;
+            content: "NEKO";
+            width: 0%;
+            overflow: hidden;
+            animation: slide-right 5s linear infinite;
+            animation-delay: 1.5s;
+        }
+    }
+    &-sub{
+        margin: 0;
+        padding: 0;
+        color: $stroke;
+        text-transform: uppercase;
+    }
+}
+
+//animation
+@keyframes slide-up {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes slide-right {
+    0%{
+        width: 0%;
+    }
+    70%{
+        width: 10%;
+    }
+}
+
+//media screens
+@media (max-width:$laptop){
+    @keyframes slide-right {
+        0%{
+            width: 0%;
+        }
+        70%{
+            width: 12%;
+        }
+    }
+    @media (max-width:$tablet){
+        @keyframes slide-right {
+            0%{
+                width: 0%;
+            }
+            70%{
+                width: 14%;
+            }
+        }
+    }
+    @media (max-width:$mobile){
+        @keyframes slide-right {
+            0%{
+                width: 0%;
+            }
+            70%{
+                width: 28%;
+            }
+        }
+        @media (max-width:$small-device){
+            @keyframes slide-right {
+                0%{
+                    width: 0%;
+                }
+                70%{
+                    width: 34%;
+                }
+            }
+        }
+    }
+}
+ 

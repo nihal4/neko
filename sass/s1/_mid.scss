@@ -1,0 +1,112 @@
+.mid {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  animation: visible1 5s ease;
+  &-text {
+    text-align: center;
+    color: $stroke;
+    font-size: 1.5rem;
+  }
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  &-header {
+    color: $stroke;
+    border-bottom: 1px solid $stroke;
+  }
+  &-list {
+    display: flex;
+    gap: 10px;
+    &-item {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+//media screen
+@media (max-width: $laptop) {
+  .box-list {
+    flex-direction: column;
+  }
+  @media (max-width: $tablet) {
+    .mid-text {
+      font-size: 0.8rem;
+    }
+    .box-list {
+      flex-direction: column;
+      &-item {
+        flex-direction: column;
+      }
+    }
+  }
+}
+//animation
+
+@keyframes visible1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//card
+
+.card {
+  width: 16rem;
+  min-height: 20rem;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  background-image: linear-gradient(
+    3deg,
+    rgba(52, 73, 94, 1) 0%,
+    rgba(133, 146, 158, 1) 100%
+  );
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &-img-top{
+    width: 50px;
+  }
+  &-btn{
+    padding: 8px 2px;
+    color: $stroke;
+    width: 130px;
+    background-color: $btn-text;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 0 $stroke;
+    transition: all .5s;
+    &:hover{
+      color: $btn-text;
+      box-shadow: inset 130px 0 0 0 $stroke;
+      transform: translateY(-5px);
+    }
+    &:active{
+      transform: translateY(0px);
+    }
+
+  }
+  &-head{
+    color: $stroke;
+    text-transform: uppercase;
+  }
+  &-text{
+    color: $stroke;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+}
